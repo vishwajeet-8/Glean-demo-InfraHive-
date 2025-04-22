@@ -1,5 +1,13 @@
 import React from "react";
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip } from "recharts";
+import {
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  ResponsiveContainer,
+} from "recharts";
 
 const AWSBilling = () => {
   const data = [
@@ -18,83 +26,37 @@ const AWSBilling = () => {
   ];
 
   return (
-    <div
-      style={{
-        padding: "20px",
-        maxWidth: "1000px",
-        margin: "0 auto",
-        marginLeft: "230px",
-      }}
-    >
+    <div className="p-5 max-w-6xl mx-auto w-full lg:ml-60">
       {/* Header */}
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          marginBottom: "20px",
-        }}
-      >
-        <div style={{ display: "flex", gap: "15px", alignItems: "center" }}>
-          <div
-            style={{
-              width: "40px",
-              height: "40px",
-              backgroundColor: "#ff9900",
-              borderRadius: "4px",
-            }}
-          ></div>
+      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 space-y-4 sm:space-y-0">
+        <div className="flex gap-4 items-center">
+          <div className="w-10 h-10 bg-orange-400 rounded"></div>
           <div>
-            <h2 style={{ margin: 0 }}>$9,175.08</h2>
-            <span style={{ color: "#666" }}>$0.00 Due</span>
+            <h2 className="text-xl font-medium m-0">$9,175.08</h2>
+            <span className="text-gray-600">$0.00 Due</span>
           </div>
         </div>
-        <div style={{ display: "flex", gap: "10px" }}>
-          <span
-            style={{
-              padding: "5px 10px",
-              backgroundColor: "#e6ffe6",
-              color: "#006600",
-              borderRadius: "4px",
-              fontSize: "14px",
-            }}
-          >
+        <div className="flex gap-2">
+          <span className="px-3 py-1 bg-green-100 text-green-700 rounded text-sm">
             APPROVED
           </span>
-          <span
-            style={{
-              padding: "5px 10px",
-              backgroundColor: "#f0f0f0",
-              color: "#666",
-              borderRadius: "4px",
-              fontSize: "14px",
-            }}
-          >
+          <span className="px-3 py-1 bg-gray-100 text-gray-600 rounded text-sm">
             PAID
           </span>
         </div>
       </div>
 
       {/* Navigation */}
-      <div
-        style={{
-          borderBottom: "1px solid #ddd",
-          marginBottom: "20px",
-        }}
-      >
+      <div className="border-b border-gray-300 mb-6 overflow-x-auto whitespace-nowrap">
         {["Summary", "Line Items", "Accounting", "History", "Comments"].map(
           (item, index) => (
             <button
               key={item}
-              style={{
-                padding: "10px 20px",
-                border: "none",
-                background: "none",
-                color: index === 0 ? "#000" : "#666",
-                borderBottom: index === 0 ? "2px solid #000" : "none",
-                marginBottom: "-1px",
-                cursor: "pointer",
-              }}
+              className={`px-5 py-2 border-0 bg-transparent ${
+                index === 0
+                  ? "text-black border-b-2 border-black"
+                  : "text-gray-600"
+              } -mb-px cursor-pointer`}
             >
               {item}
             </button>
@@ -103,14 +65,7 @@ const AWSBilling = () => {
       </div>
 
       {/* Invoice Details */}
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(4, 1fr)",
-          gap: "20px",
-          marginBottom: "30px",
-        }}
-      >
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-8">
         {[
           { label: "INVOICE #", value: "1033926849" },
           { label: "INVOICE DATE", value: "May 3, 2022" },
@@ -118,7 +73,7 @@ const AWSBilling = () => {
           { label: "BILLING PERIOD", value: "Apr 1 - 30, 2022" },
         ].map((item, index) => (
           <div key={index}>
-            <div style={{ color: "#666", fontSize: "12px" }}>{item.label}</div>
+            <div className="text-gray-600 text-xs">{item.label}</div>
             <div>{item.value}</div>
           </div>
         ))}
@@ -126,57 +81,34 @@ const AWSBilling = () => {
 
       {/* Chart Section */}
       <div>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            marginBottom: "15px",
-          }}
-        >
-          <h3 style={{ margin: 0 }}>Vendor History</h3>
-          <button
-            style={{
-              padding: "5px 15px",
-              border: "1px solid #ddd",
-              borderRadius: "4px",
-              background: "white",
-              cursor: "pointer",
-            }}
-          >
+        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4 space-y-2 sm:space-y-0">
+          <h3 className="text-lg font-medium m-0">Vendor History</h3>
+          <button className="px-4 py-1 border border-gray-300 rounded bg-white cursor-pointer">
             Compare
           </button>
         </div>
 
-        <div
-          style={{
-            backgroundColor: "white",
-            padding: "20px",
-            borderRadius: "8px",
-          }}
-        >
-          <BarChart width={900} height={300} data={data}>
-            <CartesianGrid strokeDasharray="3 3" vertical={false} />
-            <XAxis dataKey="month" />
-            <YAxis tickFormatter={(value) => `$${value}K`} />
-            <Tooltip />
-            <Bar dataKey="value" fill="gray" radius={[4, 4, 0, 0]} />
-          </BarChart>
+        <div className="bg-white p-4 sm:p-5 rounded-lg shadow-sm">
+          <div className="w-full h-[300px]">
+            <ResponsiveContainer width="100%" height="100%">
+              <BarChart data={data}>
+                <CartesianGrid strokeDasharray="3 3" vertical={false} />
+                <XAxis dataKey="month" />
+                <YAxis tickFormatter={(value) => `$${value}K`} />
+                <Tooltip />
+                <Bar dataKey="value" fill="gray" radius={[4, 4, 0, 0]} />
+              </BarChart>
+            </ResponsiveContainer>
+          </div>
         </div>
       </div>
 
       {/* Gleans Section */}
-      <div style={{ marginTop: "30px" }}>
-        <h3>Gleans</h3>
-        <div
-          style={{
-            backgroundColor: "#f9fafb",
-            padding: "20px",
-            borderRadius: "8px",
-          }}
-        >
-          <h4 style={{ margin: "0 0 10px 0" }}>Paid Bill</h4>
-          <p style={{ margin: 0, color: "#666" }}>
+      <div className="mt-8">
+        <h3 className="text-lg font-medium">Gleans</h3>
+        <div className="bg-gray-50 p-5 rounded-lg">
+          <h4 className="m-0 mb-2 font-medium">Paid Bill</h4>
+          <p className="m-0 text-gray-600">
             This bill has already been paid. No further payment activity is
             required.
           </p>

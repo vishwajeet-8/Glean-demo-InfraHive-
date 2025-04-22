@@ -1,5 +1,4 @@
 import React from "react";
-import "../vendor-styles.css";
 import { useNavigate } from "react-router-dom";
 
 function Vendors() {
@@ -82,110 +81,135 @@ function Vendors() {
   function handleClick() {
     navigate("/awsbilling");
   }
-  return (
-    <div className="dashboard-container">
-      <div className="vendorNav">
-        <h3 className="homeHead">Vendors</h3>
-        <div className="homeContent">
-          <div className="homeUpload">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              fill="currentColor"
-              className="bi bi-upload"
-              viewBox="0 0 16 16"
-            >
-              <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5" />
-              <path d="M7.646 1.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 2.707V11.5a.5.5 0 0 1-1 0V2.707L5.354 4.854a.5.5 0 1 1-.708-.708z" />
-            </svg>
-          </div>
-          <p className="homeGlean">Glean</p>
-          <button className="homeButton">U</button>
-        </div>
-      </div>
 
-      <header className="header">
-        <button className="request-vendor-btn">Request New Vendor</button>
+  return (
+    <div className="p-5 bg-gray-100 min-h-screen w-[97%] lg:ml-16">
+      {/* Header */}
+      <header className="flex justify-end mb-5">
+        <button className="bg-indigo-600 text-white px-5 py-2 rounded cursor-pointer">
+          Request New Vendor
+        </button>
       </header>
 
-      <section className="overview">
-        <h2>Overview</h2>
-        <div className="stats-container">
-          <div className="stat-box">
-            <span className="stat-label">NEW</span>
-            <span className="stat-value">10</span>
+      {/* Overview Section */}
+      <section className="mb-8">
+        <h2 className="text-gray-600 font-normal mb-5">Overview</h2>
+        <div className="flex felx-wrap gap-5 mb-8 items-center justify-around">
+          <div className="bg-white p-5 rounded-lg shadow-sm w-64">
+            <span className="block text-gray-600 text-xs mb-2">NEW</span>
+            <span className="text-2xl font-bold text-gray-800">10</span>
           </div>
-          <div className="stat-box">
-            <span className="stat-label">RECENTLY INVOICED</span>
-            <span className="stat-value">2</span>
+          <div className="bg-white p-5 rounded-lg shadow-sm w-64">
+            <span className="block text-gray-600 text-xs mb-2">
+              RECENTLY INVOICED
+            </span>
+            <span className="text-2xl font-bold text-gray-800">2</span>
           </div>
-          <div className="stat-box">
-            <span className="stat-label">MISSING DETAILS</span>
-            <span className="stat-value missing">18</span>
+          <div className="bg-white p-5 rounded-lg shadow-sm w-64">
+            <span className="block text-gray-600 text-xs mb-2">
+              MISSING DETAILS
+            </span>
+            <span className="text-2xl font-bold text-red-500">18</span>
           </div>
-          <div className="stat-box">
-            <span className="stat-label">PENDING REQUESTS</span>
-            <span className="stat-value">6</span>
+          <div className="bg-white p-5 rounded-lg shadow-sm w-64">
+            <span className="block text-gray-600 text-xs mb-2">
+              PENDING REQUESTS
+            </span>
+            <span className="text-2xl font-bold text-gray-800">6</span>
           </div>
         </div>
       </section>
 
-      <nav className="nav-tabs">
-        <button className="tab active">Vendors</button>
-        <button className="tab">Requested Vendors</button>
+      {/* Navigation Tabs */}
+      <nav className="mb-5 border-b border-gray-300">
+        <button className="px-5 py-2 mr-5 text-indigo-600 border-b-2 border-indigo-600">
+          Vendors
+        </button>
+        <button className="px-5 py-2 mr-5 text-gray-600">
+          Requested Vendors
+        </button>
       </nav>
 
-      <section className="vendors-section">
-        <div className="filters-bar">
-          <button className="filter-btn">
+      {/* Vendors Section */}
+      <section>
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-5">
+          <button className="flex items-center gap-2 px-4 py-2 bg-white border border-gray-300 rounded cursor-pointer">
             <span>Filters</span>
-            <span className="triangle-down"></span>
+            <span className="w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-600"></span>
           </button>
-          <div className="search-results">76 Vendors matching "d"</div>
-          <div className="pagination">
+          <div className="text-gray-600 text-sm">76 Vendors matching "d"</div>
+          <div className="flex items-center gap-2">
             <span>1 of 2</span>
-            <div className="pagination-controls">
-              <button className="nav-btn">←</button>
-              <button className="nav-btn">→</button>
-              <button className="settings-btn">⚙️</button>
+            <div className="flex gap-1">
+              <button className="bg-white border border-gray-300 px-2 py-1 rounded cursor-pointer">
+                ←
+              </button>
+              <button className="bg-white border border-gray-300 px-2 py-1 rounded cursor-pointer">
+                →
+              </button>
+              <button className="bg-white border border-gray-300 px-2 py-1 rounded cursor-pointer">
+                ⚙️
+              </button>
             </div>
           </div>
         </div>
 
-        <table className="vendors-table">
-          <thead>
-            <tr>
-              <th>Vendor</th>
-              <th>Department</th>
-              <th>Vendor Owner</th>
-              <th>GL Account</th>
-              <th>Approvers</th>
-              <th>Last Invoice</th>
-            </tr>
-          </thead>
-          <tbody>
-            {vendors.map((vendor, index) => (
-              <tr key={index}>
-                <td>
-                  <img src={vendor.img} alt="" />
-                </td>
-                <td
-                  onClick={() => {
-                    handleClick();
-                  }}
-                >
-                  {vendor.name}
-                </td>
-                <td>{vendor.department}</td>
-                <td>{vendor.vendorOwner}</td>
-                <td>{vendor.glAccount}</td>
-                <td>{vendor.approvers}</td>
-                <td>{vendor.lastInvoice}</td>
+        <div className="overflow-x-auto w-full">
+          <table className="w-full min-w-full bg-white rounded-lg shadow-sm border-collapse">
+            <thead>
+              <tr>
+                <th className="text-left py-4 px-4 border-b border-gray-300 text-gray-600 font-normal">
+                  Vendor
+                </th>
+                <th className="text-left py-4 px-4 border-b border-gray-300 text-gray-600 font-normal">
+                  Department
+                </th>
+                <th className="text-left py-4 px-4 border-b border-gray-300 text-gray-600 font-normal">
+                  Vendor Owner
+                </th>
+                <th className="text-left py-4 px-4 border-b border-gray-300 text-gray-600 font-normal">
+                  GL Account
+                </th>
+                <th className="text-left py-4 px-4 border-b border-gray-300 text-gray-600 font-normal">
+                  Approvers
+                </th>
+                <th className="text-left py-4 px-4 border-b border-gray-300 text-gray-600 font-normal">
+                  Last Invoice
+                </th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {vendors.map((vendor, index) => (
+                <tr key={index} className="hover:bg-gray-50">
+                  <td className="py-4 px-4 border-b border-gray-200 cursor-pointer">
+                    <img src={vendor.img} alt="" className="h-5" />
+                  </td>
+                  <td
+                    className="py-4 px-4 border-b border-gray-200 text-gray-800 cursor-pointer"
+                    onClick={handleClick}
+                  >
+                    {vendor.name}
+                  </td>
+                  <td className="py-4 px-4 border-b border-gray-200 text-gray-800">
+                    {vendor.department}
+                  </td>
+                  <td className="py-4 px-4 border-b border-gray-200 text-gray-800">
+                    {vendor.vendorOwner}
+                  </td>
+                  <td className="py-4 px-4 border-b border-gray-200 text-gray-800">
+                    {vendor.glAccount}
+                  </td>
+                  <td className="py-4 px-4 border-b border-gray-200 text-gray-800">
+                    {vendor.approvers}
+                  </td>
+                  <td className="py-4 px-4 border-b border-gray-200 text-gray-800">
+                    {vendor.lastInvoice}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </section>
     </div>
   );

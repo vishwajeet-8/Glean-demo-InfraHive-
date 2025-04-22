@@ -1,11 +1,15 @@
-import { useState } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./components/Home";
+import Home from "./components/home/Home";
 import Vendors from "./components/Vendors";
 import Layout from "./components/Layout";
 import Compare from "./components/Compare";
 import AWSBilling from "./components/AWSBilling";
+import OrderManagement from "./components/orederManagement/OrderManagement";
+import Procurement from "./components/procurement/Procurement";
+import PODrafting from "./components/procurement/PODrafting";
+import InventoryManagement from "./components/procurement/InventoryManagement";
+import QuoteComparison from "./components/procurement/QuoteComparison";
 
 function App() {
   return (
@@ -16,6 +20,15 @@ function App() {
           <Route path="compare" element={<Compare />} />
           <Route path="vendors" element={<Vendors />} />
           <Route path="awsbilling" element={<AWSBilling />} />
+          <Route path="ordermanagement" element={<OrderManagement />} />
+          <Route path="procurement" element={<Procurement />}>
+            <Route path="poddrafting" element={<PODrafting />} />
+            <Route
+              path="inventorymanagement"
+              element={<InventoryManagement />}
+            />
+            <Route path="quotecomparison" element={<QuoteComparison />} />
+          </Route>
         </Route>
       </Routes>
     </Router>
