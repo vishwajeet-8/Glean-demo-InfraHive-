@@ -31,7 +31,7 @@ const Navbar = () => {
       {/* Semi-transparent overlay that appears behind the sidebar on mobile */}
       {isMobileMenuOpen && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-30 z-10 md:hidden"
+          className="fixed inset-0 bg-opacity-30 z-10 md:hidden"
           onClick={handleClickOutside}
           aria-hidden="true"
         />
@@ -48,11 +48,7 @@ const Navbar = () => {
     }`}
       >
         <div className="flex justify-between items-center my-2 bg-white px-2">
-          <img
-            src="https://cdn.prod.website-files.com/6127a84dfe068e153ef20572/66ded1bc82df72f2e1d56eb7_Glean%20Logomark%20Blue.svg"
-            className="px-2 w-full"
-            alt="Glean logo"
-          />
+          <img src="/logo2.png" className="object-cover" alt="Glean logo" />
         </div>
 
         <div className="flex flex-col space-y-4 items-center flex-grow bg-[#5050C5] h-full">
@@ -153,7 +149,7 @@ const Navbar = () => {
         className={`flex flex-col w-full transition-all duration-300 ease-in-out md:ml-20`}
       >
         {/* Header */}
-        <div className="bg-gray-50 flex justify-between items-center p-4 w-full">
+        <div className="bg-gray-50 flex justify-between items-center p-4">
           <div className="flex items-center">
             {/* Mobile menu toggle button with animation */}
             <button
@@ -177,7 +173,10 @@ const Navbar = () => {
                 />
               </svg>
             </button>
-            <h3 className="text-xl font-medium">{pages}</h3>
+            <div className="flex items-center">
+              <img src="/logo.png" alt="" className=" w-30 object-contain" />
+              <h3 className="text-xl font-medium">{pages}</h3>
+            </div>
           </div>
           <div className="flex items-center gap-4">
             <div className="cursor-pointer">
@@ -193,9 +192,12 @@ const Navbar = () => {
                 <path d="M7.646 1.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 2.707V11.5a.5.5 0 0 1-1 0V2.707L5.354 4.854a.5.5 0 1 1-.708-.708z" />
               </svg>
             </div>
-            <p className="font-medium hidden sm:block">Glean</p>
+            <div className="flex flex-col">
+              <p className="font-medium hidden sm:block">Vishwajeet</p>
+              <p className="text-xs hidden sm:block">Procurement Manager</p>
+            </div>
             <button className="p-2 rounded-full border-none bg-black text-white w-8 h-8 flex items-center justify-center">
-              U
+              V
             </button>
           </div>
         </div>

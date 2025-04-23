@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function QuoteComparison() {
+  const navigate = useNavigate();
   const quotes = [
     {
       id: "QT-2025-001",
@@ -28,12 +30,19 @@ function QuoteComparison() {
     },
   ];
 
+  function handleClick() {
+    navigate("/comparison");
+  }
+
   return (
     <div className="p-6 lg:ml-20">
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 space-y-4 md:space-y-0">
         <h2 className="text-xl font-medium text-gray-800">Active Quotes</h2>
         <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-3">
-          <button className="flex items-center justify-center px-4 py-2 border border-gray-300 rounded-lg bg-blue-50 text-blue-600 hover:bg-blue-100 transition-colors duration-150">
+          <button
+            className="flex items-center justify-center px-4 py-2 border border-gray-300 rounded-lg bg-blue-50 text-blue-600 hover:bg-blue-100 transition-colors duration-150"
+            onClick={handleClick}
+          >
             <svg
               className="w-5 h-5 mr-2"
               fill="none"

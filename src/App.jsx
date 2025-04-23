@@ -10,6 +10,7 @@ import Procurement from "./components/procurement/Procurement";
 import PODrafting from "./components/procurement/PODrafting";
 import InventoryManagement from "./components/procurement/InventoryManagement";
 import QuoteComparison from "./components/procurement/QuoteComparison";
+import Comparison from "./components/comparison/Comparison";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
             />
             <Route path="quotecomparison" element={<QuoteComparison />} />
           </Route>
+          <Route path="comparison" element={<Comparison />} />
         </Route>
       </Routes>
     </Router>
