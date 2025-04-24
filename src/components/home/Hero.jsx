@@ -13,7 +13,7 @@ function Hero() {
     },
     {
       company: "HubSpot",
-      logo: "https://w7.pngwing.com/pngs/430/271/png-transparent-hubspot-inc-inbound-marketing-business-sales-marketing-text-logo-number.png",
+      logo: "https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/168_Hubspot_logo_logos-512.png",
       title: "Large monthly increase",
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
     },
@@ -68,7 +68,7 @@ function Hero() {
     },
     {
       company: "HubSpot",
-      logo: "https://w7.pngwing.com/pngs/430/271/png-transparent-hubspot-inc-inbound-marketing-business-sales-marketing-text-logo-number.png",
+      logo: "https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/168_Hubspot_logo_logos-512.png",
       amount: "$10.8k",
       width: "25%",
     },
