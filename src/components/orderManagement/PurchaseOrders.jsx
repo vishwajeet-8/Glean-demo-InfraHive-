@@ -61,7 +61,7 @@ function PurchaseOrders() {
   };
 
   return (
-    <div className="bg-gray-50 p-6 rounded-lg shadow-sm lg:ml-20">
+    <div className="bg-gray-50 p-6 rounded-lg shadow-sm lg:ml-20 md:ml-24">
       <div className="mb-6">
         <h1 className="font-bold text-2xl text-gray-600">Purchase Orders</h1>
         <p className="font-normal">View and manage your orders</p>

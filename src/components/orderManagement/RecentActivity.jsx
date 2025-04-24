@@ -95,7 +95,7 @@ function RecentActivity() {
   };
 
   return (
-    <div className="bg-white rounded-lg shadow-sm p-6 mt-5 lg:ml-20 mx-auto">
+    <div className="bg-white rounded-lg shadow-sm p-6 mt-5 lg:ml-20 md:ml-24 mx-auto">
       <div className="flex justify-between items-center mb-6">
         <h2 className="text-xl font-medium text-gray-800">Recent Activity</h2>
         <a

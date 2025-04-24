@@ -93,7 +93,7 @@ function Hero() {
   ];
 
   return (
-    <div className="flex flex-col lg:flex-row gap-4 px-4 pb-4 mt-2 lg:ml-20">
+    <div className="flex flex-col lg:flex-row gap-4 px-4 pb-4 mt-2 lg:ml-20 md:ml-20">
       {/* Left Column */}
       <div className="w-full lg:w-1/2">
         {/* Month Info */}

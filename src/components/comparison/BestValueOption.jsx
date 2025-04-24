@@ -3,7 +3,7 @@ import React from "react";
 
 const BestValueOption = () => {
   return (
-    <div className="p-4 bg-green-50 rounded-xl border border-green-100 mx-auto lg:ml-24 mt-4 mr-2">
+    <div className="p-4 bg-green-50 rounded-xl border border-green-100 mx-auto lg:ml-24 md:ml-24 mt-4 mr-2">
       {/* Header with dollar sign */}
       <div className="flex items-center gap-2 mb-4">
         <DollarSign className="text-green-600 h-5 w-5" />

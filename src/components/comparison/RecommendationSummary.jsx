@@ -2,7 +2,7 @@ import React from "react";
 
 const RecommendationSummary = () => {
   return (
-    <div className="mx-auto p-4 bg-blue-50 rounded-lg shadow-sm lg:ml-24 my-4 mr-2 ">
+    <div className="mx-auto p-4 bg-blue-50 rounded-lg shadow-sm lg:ml-24 md:ml-24 my-4 mr-2 ">
       <h2 className="text-xl md:text-2xl font-semibold text-gray-800 mb-4">
         Recommendation Summary
       </h2>

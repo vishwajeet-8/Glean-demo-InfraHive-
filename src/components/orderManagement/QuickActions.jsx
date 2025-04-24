@@ -122,7 +122,7 @@ function QuickActions() {
   };
 
   return (
-    <div className="bg-white rounded-lg shadow-sm p-6 lg:ml-20 mx-auto">
+    <div className="bg-white rounded-lg shadow-sm p-6 lg:ml-20 md:ml-24 mt-5 mx-auto">
       <h2 className="text-xl font-medium text-gray-800 mb-4">Quick Actions</h2>
 
       <div className="space-y-3">

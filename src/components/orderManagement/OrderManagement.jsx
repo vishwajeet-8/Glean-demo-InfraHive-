@@ -6,7 +6,7 @@ import QuickActions from "./QuickActions";
 function OrderManagement() {
   return (
     <div>
-      <section className="mb-8 lg:ml-20">
+      <section className="mb-8 lg:ml-20 md:ml-24">
         <div className="m-3 flex flex-col">
           <h2 className="text-gray-600 font-bold text-2xl">Order Management</h2>
           <p className="font-normal">Track and Manage Purchase Orders</p>

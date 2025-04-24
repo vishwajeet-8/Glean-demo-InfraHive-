@@ -12,8 +12,8 @@ function Procurement() {
     { id: "inventory-management", label: "Inventory Management" },
   ];
   return (
-    <div>
-      <section className="mb-8 lg:ml-20">
+    <div className="lg:ml-24 md:ml-24">
+      <section className="mb-8">
         <div className="m-3 flex flex-col">
           <h2 className="text-gray-600 font-bold text-2xl">Procurement</h2>
           <p className="font-normal">
@@ -48,7 +48,7 @@ function Procurement() {
         </div>
       </section>
 
-      <div className="bg-white rounded-lg shadow-sm border border-gray-200 mx-auto lg:ml-20 mt-5">
+      <div className="bg-white rounded-lg shadow-sm border border-gray-200 mx-auto mt-5">
         {/* Tabs */}
         <div className="flex border-b border-gray-200 overflow-x-auto">
           {tabs.map((tab) => (

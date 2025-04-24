@@ -83,7 +83,7 @@ function Vendors() {
   }
 
   return (
-    <div className="p-5 bg-gray-100 min-h-screen w-[97%] lg:ml-16">
+    <div className="p-5 bg-gray-100 min-h-screen w-[97%] lg:ml-20 md:ml-20">
       {/* Header */}
       <header className="flex justify-end mb-5">
         <button className="bg-indigo-600 text-white px-5 py-2 rounded cursor-pointer">

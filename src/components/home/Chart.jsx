@@ -191,7 +191,7 @@ function Chart() {
   };
 
   // Dynamically calculate text positions
-  const chartWidth = Math.min(windowWidth - 40, 1200); // Account for margins
+  const chartWidth = Math.min(windowWidth - 10, 700); // Account for margins
   const firstTextX = chartWidth * 0.25;
   const secondTextX = chartWidth * 0.5;
   const thirdTextX = chartWidth * 0.75;

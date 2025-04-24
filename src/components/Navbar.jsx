@@ -173,10 +173,7 @@ const Navbar = () => {
                 />
               </svg>
             </button>
-            <div className="flex items-center">
-              <img src="/logo.png" alt="" className=" w-30 object-contain" />
-              <h3 className="text-xl font-medium">{pages}</h3>
-            </div>
+            <h3 className="text-xl font-medium">{pages}</h3>
           </div>
           <div className="flex items-center gap-4">
             <div className="cursor-pointer">

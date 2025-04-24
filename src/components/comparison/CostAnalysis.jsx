@@ -3,7 +3,7 @@ import { Info } from "lucide-react";
 
 const CostAnalysis = () => {
   return (
-    <div className="mx-auto p-4 bg-white rounded-xl border border-gray-200 shadow-sm lg:ml-24 mt-4 mr-2">
+    <div className="mx-auto p-4 bg-white rounded-xl border border-gray-200 shadow-sm lg:ml-24 md:ml-24 mt-4 mr-2">
       <h2 className="text-xl font-bold text-gray-800 mb-4">Cost Analysis</h2>
 
       {/* Tech Solutions Inc. */}

@@ -29,7 +29,7 @@ function InventoryManagement() {
   ];
 
   return (
-    <div className="p-6 lg:ml-20">
+    <div className="p-6">
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 space-y-4 md:space-y-0">
         <h2 className="text-xl font-medium text-gray-800">
           Inventory & Reorder Alerts

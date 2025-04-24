@@ -1,10 +1,9 @@
-
 import React from "react";
 import { Star, CheckCircle } from "lucide-react";
 
 const VendorPerformanceBreakdown = () => {
   return (
-    <div className="mx-auto p-4 bg-white rounded-xl border border-gray-200 shadow-sm lg:ml-24 mt-4 mr-2">
+    <div className="mx-auto p-4 bg-white rounded-xl border border-gray-200 shadow-sm md:ml-24 lg:ml-24 mt-4 mr-2">
       <h2 className="text-xl font-bold text-gray-800 mb-4">
         Vendor Performance Breakdown
       </h2>

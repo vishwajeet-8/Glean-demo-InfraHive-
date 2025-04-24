@@ -3,7 +3,7 @@ import React from "react";
 
 const RecommendedOption = () => {
   return (
-    <div className="p-4 bg-blue-50 rounded-xl border border-blue-100 mx-auto lg:ml-24 mt-4 mr-2">
+    <div className="p-4 bg-blue-50 rounded-xl border border-blue-100 mx-auto lg:ml-24 md:ml-24 mt-4 mr-2">
       {/* Header with badge */}
       <div className="flex items-center gap-2 mb-4">
         <Award className="text-blue-600 h-5 w-5" />

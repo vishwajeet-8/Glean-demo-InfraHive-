@@ -8,8 +8,14 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from "recharts";
+import { useNavigate } from "react-router-dom";
 
 const AWSBilling = () => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/compare");
+  };
   const data = [
     { month: "JUN", value: 0 },
     { month: "JUL", value: 35.5 },
@@ -26,11 +32,13 @@ const AWSBilling = () => {
   ];
 
   return (
-    <div className="p-5 max-w-6xl mx-auto w-full lg:ml-60">
+    <div className="p-5 max-w-6xl mx-auto w-full lg:ml-20 md:ml-20">
       {/* Header */}
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 space-y-4 sm:space-y-0">
         <div className="flex gap-4 items-center">
-          <div className="w-10 h-10 bg-orange-400 rounded"></div>
+          <div className="w-10 h-10 bg-gray-400 rounded">
+            <img src="logo2.png" alt="" className="h-10 w-10" />
+          </div>
           <div>
             <h2 className="text-xl font-medium m-0">$9,175.08</h2>
             <span className="text-gray-600">$0.00 Due</span>
@@ -83,7 +91,10 @@ const AWSBilling = () => {
       <div>
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4 space-y-2 sm:space-y-0">
           <h3 className="text-lg font-medium m-0">Vendor History</h3>
-          <button className="px-4 py-1 border border-gray-300 rounded bg-white cursor-pointer">
+          <button
+            className="px-4 py-1 border border-gray-300 rounded bg-white cursor-pointer"
+            onClick={handleClick}
+          >
             Compare
           </button>
         </div>

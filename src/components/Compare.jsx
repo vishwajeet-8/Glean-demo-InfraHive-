@@ -62,7 +62,7 @@ const SimpleChart = () => {
 
 function Compare() {
   return (
-    <div className="p-4 md:p-6 lg:p-8 max-w-7xl mx-auto flex flex-col gap-6">
+    <div className="p-4 md:p-6 lg:p-8 mx-auto flex flex-col gap-6 lg:ml-20 md:ml-20">
       <h1 className="text-2xl md:text-3xl font-bold text-center lg:text-left">
         Compare
       </h1>
@@ -75,7 +75,7 @@ function Compare() {
         <div className="w-full md:w-2/5 bg-gray-100 rounded-lg p-2 flex justify-between items-center">
           <div className="flex items-center gap-2">
             <img
-              src="data:image/jpeg;base64,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"
+              src="/logo2.png"
               alt="Glean logo"
               className="h-8 w-8 rounded-full"
             />
@@ -256,7 +256,7 @@ function Compare() {
                 <td className="p-3">
                   <div className="flex items-center gap-2">
                     <img
-                      src="https://w7.pngwing.com/pngs/430/271/png-transparent-hubspot-inc-inbound-marketing-business-sales-marketing-text-logo-number.png"
+                      src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/168_Hubspot_logo_logos-512.png"
                       alt="HubSpot"
                       className="h-5 w-5"
                     />
@@ -298,7 +298,7 @@ function Compare() {
                 <td className="p-3">
                   <div className="flex items-center gap-2">
                     <img
-                      src="/api/placeholder/20/20"
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwt02Pvocmj2bC5dPEWVClHVw843KI_a6yNw&s"
                       alt="Oracle"
                       className="h-5 w-5"
                     />
@@ -319,7 +319,7 @@ function Compare() {
                 <td className="p-3">
                   <div className="flex items-center gap-2">
                     <img
-                      src="/api/placeholder/20/20"
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBm1dfOBhz6s2fMONaonsRddC7G7FbwFugAw&s"
                       alt="IBM"
                       className="h-5 w-5"
                     />

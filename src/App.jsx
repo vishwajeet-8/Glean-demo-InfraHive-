@@ -5,7 +5,7 @@ import Vendors from "./components/Vendors";
 import Layout from "./components/Layout";
 import Compare from "./components/Compare";
 import AWSBilling from "./components/AWSBilling";
-import OrderManagement from "./components/orederManagement/OrderManagement";
+import OrderManagement from "./components/orderManagement/OrderManagement";
 import Procurement from "./components/procurement/Procurement";
 import PODrafting from "./components/procurement/PODrafting";
 import InventoryManagement from "./components/procurement/InventoryManagement";
